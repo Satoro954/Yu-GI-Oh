@@ -21,6 +21,13 @@
 
     <build>
         <plugins>
+            <!-- Compiler plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
+            </plugin>
+
             <!-- Shade plugin to create a fat JAR -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -33,6 +40,7 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
+                            <finalName>telegrambot-fat</finalName>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <mainClass>com.example.telegrambot.MyBot</mainClass>
