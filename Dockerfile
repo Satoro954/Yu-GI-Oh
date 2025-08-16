@@ -1,4 +1,4 @@
-FROM maven:3.9.3-openjdk-17-slim
+FROM maven:3.9.2-eclipse-temurin-17
 WORKDIR /app
 COPY . .
 RUN mvn package -DskipTests
