@@ -6,14 +6,15 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 public class MyBot extends TelegramLongPollingBot {
+
     @Override
     public String getBotUsername() {
-        return System.getenv("TELEGRAM_BOT_USERNAME"); // safe way
+        return System.getenv("TELEGRAM_BOT_USERNAME"); // from env variable
     }
 
     @Override
     public String getBotToken() {
-        return System.getenv("TELEGRAM_BOT_TOKEN"); // safe way
+        return System.getenv("TELEGRAM_BOT_TOKEN"); // from env variable
     }
 
     @Override
